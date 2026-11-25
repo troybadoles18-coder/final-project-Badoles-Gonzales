@@ -1,59 +1,117 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AniScope - Anime Discovery</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
     <header>
-      <h1>AniScope</h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#explore">Explore</a>
-        <a href="#watchlist">Watchlist</a>
-      </nav>
+        <h1>AniScope</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#watchlist">Watchlist</a>
+        </nav>
     </header>
 
-    <main id="home">
-      <section class="hero">
-        <h2>Discover Your Favorite Anime</h2>
-        <p>Explore popular anime movies and series.</p>
-        <input id="search" type="text" placeholder="Search anime..." />
-      </section>
+    <main>
 
-      <section id="explore">
-        <h2>Explore Anime</h2>
-        <p id="status">Loading anime covers...</p>
+        <!-- HOME SECTION -->
+        <section id="home" class="hero">
+            <h2>Discover Your Favorite Anime</h2>
 
-        <div id="genre-sections"></div>
-      </section>
+            <p>Explore popular anime movies and series.</p>
 
-      <section id="watchlist">
-        <h2>My Watchlist</h2>
-        <div id="watchlist-grid" class="anime-grid"></div>
-        <p id="empty-watchlist">Your watchlist is empty.</p>
-      </section>
+            <input
+                type="text"
+                id="search"
+                placeholder="Search anime..."
+                autocomplete="off"
+            >
+        </section>
+
+        <!-- EXPLORE SECTION -->
+        <section id="explore">
+
+            <h2>Explore Anime</h2>
+
+            <p id="status">Loading anime covers...</p>
+
+            <!-- Anime genres will appear here -->
+            <div id="genre-sections"></div>
+
+        </section>
+
+        <!-- WATCHLIST SECTION -->
+        <section id="watchlist">
+
+            <h2>My Watchlist</h2>
+
+            <div
+                id="watchlist-grid"
+                class="anime-grid">
+            </div>
+
+            <p id="empty-watchlist">
+                Your watchlist is empty.
+            </p>
+
+        </section>
+
     </main>
 
+    <!-- ANIME DETAILS MODAL -->
     <div id="anime-modal" class="modal">
-      <div class="modal-content">
-        <button id="close-modal" class="close-btn">✕</button>
-        <img id="modal-image" src="" alt="Anime cover" />
-        <div>
-          <h2 id="modal-title"></h2>
-          <p id="modal-info"></p>
-          <p id="modal-synopsis"></p>
-          <button id="modal-watchlist-btn" class="add-btn">
-            Add to Watchlist
-          </button>
+
+        <div class="modal-content">
+
+            <button
+                id="close-modal"
+                class="close-btn"
+                aria-label="Close modal">
+                ✕
+            </button>
+
+            <img
+                id="modal-image"
+                src=""
+                alt="Anime cover"
+            >
+
+            <div class="modal-details">
+
+                <h2 id="modal-title"></h2>
+
+                <p id="modal-info"></p>
+
+                <p id="modal-synopsis"></p>
+
+                <button
+                    id="modal-watchlist-btn"
+                    class="add-btn">
+                    Add to Watchlist
+                </button>
+
+            </div>
+
         </div>
-      </div>
+
     </div>
 
-    <footer>AniScope © 2026 | Anime discovery for an otaku</footer>
+    <!-- FOOTER -->
+    <footer>
+        AniScope © 2026 | Anime discovery for an otaku
+    </footer>
 
     <script src="script.js"></script>
-  </body>
+
+</body>
 </html>
